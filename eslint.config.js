@@ -5,6 +5,9 @@ module.exports = uni({
   // 启用 stylistic 格式化规则
   stylistic: true,
   unocss: true,
+  formatters: {
+    css: true,
+  },
   ignores: [],
   rules: {
     'no-console': 'off',

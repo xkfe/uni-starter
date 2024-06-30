@@ -1,41 +1,19 @@
-<template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png" />
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
-    </view>
-  </view>
-</template>
-
 <script setup lang="ts">
-import { ref } from 'vue'
 const title = ref('Hello')
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+<template>
+  <view class="center flex-col">
+    <image class="logo w-200" src="/static/logo.png" />
+    <view class="text-area">
+      <text class="color-[--primary-color] active:(bg-gray-400 font-medium)">
+        {{ title }}
+      </text>
+    </view>
+    <wd-button type="primary">
+      主要按钮
+    </wd-button>
+  </view>
+</template>
 
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-</style>
+<style></style>

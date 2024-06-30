@@ -1,0 +1,8 @@
+:root,
+page {
+  --primary-color: teal;
+}
+// 修改 wot-design 主题色
+$-color-theme: teal;
+// 修改 nut-ui 主题色(未启用，防止代码体积过大。如需使用可解开 styles/index.scss 中的第一行)
+$primary-color: teal;

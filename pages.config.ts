@@ -8,6 +8,7 @@ const env = loadEnv(process.env.NODE_ENV!, path.resolve(process.cwd(), 'env'))
 const { VITE_APP_TITLE } = env
 
 export default defineUniPages({
+  middleware: ['global'],
   pages: [],
   globalStyle: {
     navigationStyle: 'default',

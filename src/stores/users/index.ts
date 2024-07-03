@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 const initState = { nickname: '', avatar: '', token: '' }
 type UserInfo = typeof initState
 
-export const useLoginStore = defineStore('user', () => {
+export const useUserStore = defineStore('user', () => {
   const USER_INFO = ref<UserInfo>({ ...initState })
 
   const IS_LOGIN = computed(() => !!USER_INFO.value.token)

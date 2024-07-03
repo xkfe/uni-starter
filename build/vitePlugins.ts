@@ -2,7 +2,7 @@
  * @Author: xkfe xkfe0516@gmail.com
  * @Date: 2024-06-28 17:12:18
  * @LastEditors: xkfe xkfe0516@gmail.com
- * @LastEditTime: 2024-06-30 16:50:22
+ * @LastEditTime: 2024-07-03 23:02:49
  * @Description: vite plugin list
  */
 
@@ -38,8 +38,8 @@ export function vitePlugins(): (PluginOption | PluginOption[])[] {
       resolvers: [NutResolver(), WotResolver()],
     }),
     uni(),
-    UnoCSS(),
     UniMiddleware(),
+    UnoCSS(),
     AutoImport({
       imports: [
         'vue',
@@ -47,6 +47,10 @@ export function vitePlugins(): (PluginOption | PluginOption[])[] {
         'pinia',
         // 针对小程序提供的use(docs: https://github.com/uni-helper/uni-use/blob/main/src/readme.md)
         uniuseAutoImports(),
+      ],
+      dirs: [
+        'src/stores/*',
+        'src/components/*',
       ],
       dts: './typings/auto-imports.d.ts',
     }),

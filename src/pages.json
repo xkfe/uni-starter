@@ -1,8 +1,15 @@
 {
+  "middleware": [
+    "global"
+  ],
   "pages": [
     {
       "path": "pages/index/index",
       "type": "home"
+    },
+    {
+      "path": "pages/demo/index",
+      "type": "page"
     }
   ],
   "globalStyle": {

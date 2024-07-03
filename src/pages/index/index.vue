@@ -1,5 +1,10 @@
 <script setup lang="ts">
 const title = ref('Hello')
+function toDemoPage() {
+  uni.navigateTo({
+    url: '/pages/demo/index',
+  })
+}
 </script>
 
 <template>
@@ -10,7 +15,7 @@ const title = ref('Hello')
         {{ title }}
       </text>
     </view>
-    <wd-button type="primary">
+    <wd-button type="primary" @click="toDemoPage">
       主要按钮
     </wd-button>
   </view>
